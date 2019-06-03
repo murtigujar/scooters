@@ -1,0 +1,41 @@
+
+# scooters
+Ridecell Scooters API Project
+
+Please see README for the API functionality
+
+* Can you briefly summarize your progress?
+
+Following REST APIs are completed:
+
+- Add scooter
+- List all scooters
+- List available scooters in given location
+- Reserve scooter
+- End Reservation
+- List all Reservations
+- Make payment
+- List all payments
+
+Above APIs have been tested manually and the correspoding database modifications have been verified.
+
+
+* What things did you have to do for this challenge that were new to you?
+- Configuring PostGreSQL for the backend.
+- Using the GORM libary was a bit challenging, especially since all the ORM functionality is not fully available.
+Also since it lacks documentation and has some bugs.
+
+* Is there anything you got blocked on during the challenge?
+- Using the low-level framework APIs was sometimes cumbersome.
+  Since I work on a project where we have our own framework with abundant of wrapper APIs for logging,
+  JSON marshalling, DB handling, error handling etc, there is never need to use the raw functionality.
+
+* If this was a real situation and you had been given more time, say an additional 1 week,
+what are the top things in your mind that you would want to improve about this implementation?
+What would you think are the necessary improvements to make it something we could confidently deploy in production?
+- Could not write mock tests due to lack of time. Adding unit test would be the top priority.
+- More accurate representation of the model.
+- Determine if the server can handle sufficient requests, if not find out the bottlenecks and fix them.
+- Concurrency testing to check if data integrity is not compromised, if so fix the issues
+- Basic error handling is done, but more validations need to be in place.
+- Auto code generation for common functionality such as reading table info from database.
